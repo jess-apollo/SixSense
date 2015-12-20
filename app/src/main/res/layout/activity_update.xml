@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="..."
+        android:id="@+id/tv_current"
+        android:layout_weight="0.88"
+        android:layout_below="@+id/et_title"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:hint="Title"
+        android:id="@+id/et_title"
+        android:layout_weight="0.88"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_memo"
+        android:textSize="18sp"
+        android:background="@android:color/transparent"
+        android:singleLine="true"
+        android:hint="메모를 입력하시오."
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/btn_finish"
+        android:layout_alignEnd="@+id/tv_current"
+        android:layout_below="@+id/cb_idea" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="등록"
+        android:id="@+id/btn_finish"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="돌아가기"
+        android:id="@+id/btn_back1"
+        android:layout_alignTop="@+id/btn_finish"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="여행"
+        android:id="@+id/cb_travel"
+        android:layout_below="@+id/tv_current"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="맛집"
+        android:id="@+id/cb_meal"
+        android:layout_above="@+id/cb_rest"
+        android:layout_alignStart="@+id/cb_rest" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디어"
+        android:id="@+id/cb_idea"
+        android:layout_below="@+id/cb_travel"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기타"
+        android:id="@+id/cb_rest"
+        android:layout_alignTop="@+id/cb_idea"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
